@@ -1,4 +1,4 @@
-name: 'opencv-cache'
+name: 'opencv-cache-improved'
 description: 'download, build and cache opencv from source'
 author: 'Uriel Chemouni'
 inputs:
@@ -6,10 +6,12 @@ inputs:
     description: 'branch to checkout default is 4.x'
     required: true
     default: '4.x'
-  BUILD_LIST:
-    description: 'List of feature to compile, the less features you select the smallest will be the image.'
-    required: true
-    default: 'core'
+  BUILD_opencv_python3:
+    description: 'Build Python3'
+    default: 'ON'
+  WITH_GSTREAMER:
+    description: 'Build GStreamer'
+    default: 'ON'
   DO_SHRINK:
     description: 'redude the size of the image by removing samples and tests.'
     default: ''
