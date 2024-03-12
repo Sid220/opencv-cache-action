@@ -29,7 +29,8 @@ async function getCode(config: Configurations) {
   const cMakeArgs = [
     "-DCMAKE_BUILD_TYPE=Release",
     "-DOPENCV_ENABLE_NONFREE=ON",
-    `-DBUILD_LIST=${config.BUILD_LIST}`,
+    `-DBUILD_opencv_python3=${config.BUILD_opencv_python3}`,
+    `-DWITH_GSTREAMER=${config.WITH_GSTREAMER}`,
   ];
   if (!config.NO_CONTRIB) {
     cMakeArgs.push("-DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules");
